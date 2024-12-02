@@ -50,6 +50,7 @@ class Box
         // Convert string to int
         if (!Int32.TryParse(s, out int result))
         {
+            Console.WriteLine("Input: 1 - 9");
             return false;
         }
 
@@ -63,8 +64,13 @@ class Box
         // Create index value to substitute
         int index = result - 1;
 
+        if ("X" == coordinates[index].GetValue() || "O" == coordinates[index].GetValue())
+        {
+            Console.WriteLine("Location must be valid");
+            return false;
+        }
+
         // Add Player action to array
-        // ui[coordinates[index].GetX()][coordinates[index].GetY()] = CurrentPlayer.GetAction();
         coordinates[index].SetValue(CurrentPlayer.GetAction());
         return true;
     }
