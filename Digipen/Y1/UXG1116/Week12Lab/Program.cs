@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 
-
 partial class Program
 {
     static List<MonoBehaviour> monoBehaviours = new List<MonoBehaviour>();
@@ -58,7 +57,13 @@ partial class Program
         Vector2 vec2 = vec1;
         vec2.x = 3;
         vec2.y = 4;
-        Console.WriteLine("vec1: ({0} {1}) should be different from vec2: ({2} {3})", vec1.x, vec1.y, vec2.x, vec2.y);
+        Console.WriteLine(
+            "vec1: ({0} {1}) should be different from vec2: ({2} {3})",
+            vec1.x,
+            vec1.y,
+            vec2.x,
+            vec2.y
+        );
 
         Console.WriteLine("===    Testing Vector2 ===");
         for (int i = 0; i < 5; ++i)
@@ -81,11 +86,17 @@ partial class Program
         AddMonoBehaviour(new Vector2(20.0f, 20.0f), "Elie");
         AddMonoBehaviour(new Vector2(-100.0f, 20.0f), "Alwyn");
         AddMonoBehaviour(new Vector2(-250.0f, -230.0f), "Kevin");
-        Console.WriteLine("Total number of MonoBehaviour constructed: {0}", MonoBehaviour.GetConstructedCount());
+        Console.WriteLine(
+            "Total number of MonoBehaviour constructed: {0}",
+            MonoBehaviour.GetConstructedCount()
+        );
         AddMonoBehaviour(new Vector2(10.0f, 10.0f), "Gerald2");
         AddMonoBehaviour(new Vector2(20.0f, 20.0f), "Elie2");
         AddMonoBehaviour(new Vector2(-100.0f, 20.0f), "Alwyn2");
-        Console.WriteLine("Total number of MonoBehaviour constructed: {0}", MonoBehaviour.GetConstructedCount());
+        Console.WriteLine(
+            "Total number of MonoBehaviour constructed: {0}",
+            MonoBehaviour.GetConstructedCount()
+        );
         monoBehaviours.Clear();
 
         Console.WriteLine("=== Testing MonoBehavior ===");
@@ -102,6 +113,4 @@ partial class Program
         EnableMonoBehaviourByName("Gerald");
         PrintActiveMonoBehaviours();
     }
-
-
 }
