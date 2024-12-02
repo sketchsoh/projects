@@ -2,10 +2,10 @@ public class Coordinate
 {
     private int x;
     private int y;
-    private int value;
+    private string value;
 
     // Coordinate Initializer
-    public Coordinate(int value, int x, int y)
+    public Coordinate(string value, int x, int y)
     {
         this.value = value;
         this.x = x;
@@ -24,6 +24,11 @@ public class Coordinate
 
     public string GetValue()
     {
-        return value.ToString();
+        return value;
+    }
+
+    public void SetValue(string value)
+    {
+        this.value = value;
     }
 }

@@ -6,15 +6,15 @@ class Box
 
     // Initialize Coordinates List
     List<Coordinate> coordinates = new List<Coordinate>();
-    Coordinate one = new Coordinate(1, 0, 0);
-    Coordinate two = new Coordinate(2, 0, 2);
-    Coordinate three = new Coordinate(3, 0, 4);
-    Coordinate four = new Coordinate(4, 2, 0);
-    Coordinate five = new Coordinate(5, 2, 2);
-    Coordinate six = new Coordinate(6, 2, 4);
-    Coordinate seven = new Coordinate(7, 4, 0);
-    Coordinate eight = new Coordinate(8, 4, 2);
-    Coordinate nine = new Coordinate(9, 4, 4);
+    Coordinate one = new Coordinate("1", 0, 0);
+    Coordinate two = new Coordinate("2", 0, 2);
+    Coordinate three = new Coordinate("3", 0, 4);
+    Coordinate four = new Coordinate("4", 2, 0);
+    Coordinate five = new Coordinate("5", 2, 2);
+    Coordinate six = new Coordinate("6", 2, 4);
+    Coordinate seven = new Coordinate("7", 4, 0);
+    Coordinate eight = new Coordinate("8", 4, 2);
+    Coordinate nine = new Coordinate("9", 4, 4);
 
     // Initialise UI
     public Box()
@@ -64,13 +64,18 @@ class Box
         int index = result - 1;
 
         // Add Player action to array
-        ui[coordinates[index].GetX()][coordinates[index].GetY()] = CurrentPlayer.GetAction();
+        // ui[coordinates[index].GetX()][coordinates[index].GetY()] = CurrentPlayer.GetAction();
+        coordinates[index].SetValue(CurrentPlayer.GetAction());
         return true;
     }
 
     // Draw UI
     public void Draw()
     {
+        for (int i = 0; i < coordinates.Count; i++)
+        {
+            ui[coordinates[i].GetX()][coordinates[i].GetY()] = coordinates[i].GetValue();
+        }
         for (int i = 0; i < 5; i++)
         {
             for (int j = 0; j < 5; j++)
@@ -116,5 +121,19 @@ class Box
             return true;
         }
         return false;
+    }
+
+    public bool CheckDraw()
+    {
+        foreach (Coordinate coords in coordinates)
+        {
+            bool notnumber = Int32.TryParse(coords.GetValue(), out int value);
+
+            if (notnumber)
+            {
+                return false;
+            }
+        }
+        return true;
     }
 }

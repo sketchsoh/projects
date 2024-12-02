@@ -39,13 +39,22 @@ namespace TicTacToe
                 Console.WriteLine();
 
                 // Check if the player won
-                win = box.CheckWin();
+                if (box.CheckWin())
+                {
+                    break;
+                }
                 currentPlayer = currentPlayer == P1 ? P2 : P1;
+
+                if (box.CheckDraw())
+                {
+                    Console.WriteLine("It's a Draw! Restart With P1!");
+                    box = new Box();
+                    Console.WriteLine();
+                    box.Draw();
+                    Console.WriteLine();
+                    currentPlayer = P1;
+                }
             }
-
-            // Change current player to winning player
-            currentPlayer = currentPlayer == P1 ? P2 : P1;
-
             // Game Ends
             Console.WriteLine("Congratulations {0}!", currentPlayer.GetName());
         }
