@@ -728,11 +728,3 @@ $RECYCLE.BIN/
 
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,windows,csharp,visualstudiocode,visualstudio,dotnetcore,unity,circuitpython
-Personal/cpp/Learning/Hello/.vscode/tasks.json
-Personal/cpp/Learning/Hello/main
-Personal/cpp/Learning/Hello/.vscode/tasks.json
-Personal/cpp/Learning/Hello/main.dSYM/Contents/Info.plist
-Personal/cpp/Learning/Hello/main.dSYM/Contents/Resources/DWARF/main
-Personal/cpp/Learning/Hello/main.dSYM/Contents/Resources/Relocations/aarch64/main.yml
-Personal/cpp/Learning/Hello/.vscode
-Personal/cpp/Learning/Hello/.vscode/tasks.json

@@ -1,0 +1,39 @@
+=== Testing Circles ===
+Testing circle with points = (0,0) and radius = 10
+  Area: 314.15002
+  Perimeter: 62.83
+  Midpoint: (0,0)
+Testing circle with points = (100,100) and radius = 20
+  Area: 1256.6001
+  Perimeter: 125.66
+  Midpoint: (100,100)
+Testing circle with points = (0,-50) and radius = 5
+  Area: 78.537506
+  Perimeter: 31.415
+  Midpoint: (0,-50)
+=== Testing Rectangle ===
+Testing rectangle with top-left = (0,1) and bottom-right = (0,1)
+  Area: 0
+  Perimeter: 0
+  Midpoint: (0,1)
+Testing rectangle with top-left = (-50,50) and bottom-right = (50,-50)
+  Area: 10000
+  Perimeter: 400
+  Midpoint: (0,0)
+Testing rectangle with top-left = (100,100) and bottom-right = (150,-100)
+  Area: 10000
+  Perimeter: 500
+  Midpoint: (125,0)
+=== Testing Triangle ===
+Testing triangle with points: (0,0), (1,0), (0,1)
+  Area: 0.5
+  Perimeter: 3.4142137
+  Midpoint: (0.33333334,0)
+Testing triangle with points: (100,100), (50,50), (150,50)
+  Area: 2500
+  Perimeter: 241.42136
+  Midpoint: (66.666664,0)
+Testing triangle with points: (0,-50), (-20,50), (20,50)
+  Area: 2000
+  Perimeter: 243.96078
+  Midpoint: (16.666666,0)
